@@ -1,7 +1,7 @@
 # Mathematics I Conqueror · kaoyan-math-ai-search (China's National Postgraduate Entrance Exam Math I)
 
-&gt; A purely front-end, single-file, offline-capable learning system for Math I of China's National Postgraduate Entrance Exam: **722 problem-solving models** (refined by Kimi K3 from 8 lecture notes by Kai Ge's Postgraduate Entrance Exam & Competition series) + progress tracking + source tracing of past exam questions + gamified conquest map + AI-searchable question bank.
-&gt; All data is embedded in the HTML — double-click to use. It can also be paired with a large language model to trace each question on your mock exams back to its source.
+> A purely front-end, single-file, offline-capable learning system for Math I of China's National Postgraduate Entrance Exam: **722 problem-solving models** (model taxonomy refined with an LLM from publicly available lecture materials) + progress tracking + source tracing of past exam questions + gamified conquest map + AI-searchable question bank.
+> All data is embedded in the HTML — double-click to use. It can also be paired with a large language model to trace each question on your mock exams back to its source.
 
 ## ✨ Feature Overview
 
@@ -17,16 +17,17 @@
 
 ### 🗺️ map-v14.html — Conquest Map
 - **Gamified map**: 722 "towns" = 722 problem-solving models, Canvas rendering, four-state legend (conquered / in battle / long-unsolved / unexplored)
-- **📝 Mock Exam Mode**: Built-in Math I / Math II mock exam sets (Zhang Yu's 2027 Eight Sets and others are being updated; you can also feed your own to an AI), view the model each question belongs to, mark mastery, and expand training questions with summaries
+- **📝 Mock Exam Mode**: Built-in Math I / Math II mock exam framework (user-supplied mock sets supported), view the model each question belongs to, mark mastery, and expand training questions with summaries
 - **🏷️ Town Detail Sidebar**: Model quick view, predicted probability, my notes, recommended training
 - **🧭 Minimap + town name labels**
 - **📥 Data sync**: Export backup in v14 → Import backup in map, or use the Conquest Map entry for automatic sync
 
 ### 🤖 How to Use the AI-Searchable Question Bank
 Upload `v14.html` along with the mock exam questions you've worked on to any LLM that supports file uploads, and send:
-&gt; Now, based on Zhang Yu's Eight Sets, start from a specific question, find the corresponding problem-solving model in v14.html, and then match questions for me in three categories: similar problem structure, similar method, and source tracing to past exam questions.
+> Starting from a specific question in my mock exam, find the corresponding problem-solving model in v14.html, and then match questions for me in three categories: similar problem structure, similar method, and source tracing to past exam questions.
 
 ## 📦 File Description
+
 | File | Description |
 |------|-------------|
 | `v14.html` | Learning control console (data + records + knowledge base) |
@@ -35,7 +36,10 @@ Upload `v14.html` along with the mock exam questions you've worked on to any LLM
 ## 🚀 Usage
 - **Local**: Place both files in the same folder and open `v14.html` in a browser — works offline
 - **Online**: Deploy with GitHub Pages and visit directly
-- **Data**: Classification of problem-solving methods and question types is based on Kai Ge's 8 lecture notes (2027 Postgraduate Entrance Exam & Competition series). 2027 Zhang Yu 1000 Questions (Math I / II) (missing the Math I probability section) · 2027 Li Lin 880 (Math I / Math II) (about 20 questions missing) · Zhang Yu 2027 Eight Sets · Past exam questions 2004–2026 · Examples from online courses
+- **Data**: The classification of problem-solving methods and question types is derived from publicly available lecture materials and past exam papers (2004–2026). Question texts are user-supplied via import; this repository does not distribute third-party copyrighted content.
+
+## ⚖️ Legal & Compliance
+This repository contains only the classification framework (problem-solving models, metadata schema, progress-tracking logic) and does not include any third-party copyrighted question texts. Users are expected to supply their own legally obtained sources (commercial workbooks, mock exam sets, etc.) via the built-in JSON import. Past exam questions are stored as factual metadata only (year, exam type, question number, topic tag); analytical commentary is independently written. For any copyright concerns, please open an issue or contact the maintainer.
 
 ## 📄 License
 MIT License, for study and communication purposes only.
